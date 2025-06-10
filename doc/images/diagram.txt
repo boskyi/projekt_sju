@@ -1,0 +1,10 @@
+flowchart TD
+    A[Start - utworzenie lub ręczne uruchomienie workflowa] --> B(sprawdzenie kodu z repozytorium)
+    B --> |Przygotowanie środowiska pracy| C[Instalacja narzędzia cosign]
+    C --> D[Konfiguracja środowiska Docker Build]
+    D --> E[Logowanie do rejestru GHCR]
+    E --> F[Pobieranie metadanych obrazu Dockera]
+    F -->|Budowanie oraz testowanie| G[Zbudowanie obrazu do testów]
+    G --> H[Uruchomienie testów wewnątrz kontenera]
+    H --> |Publikacja oraz podpisywanie|I[Zbudowanie i wypchnięcie Dockera]
+    I --> J[Podpisanie obrazu poprzez cosign]
