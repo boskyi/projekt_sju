@@ -5,7 +5,11 @@
     "image": "ghcr.io/boskyi/projekt_sju:v1.0.1",
     "customizations": {
       "vscode": {
-        "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
+        "extensions": ["ms-python.python",
+            "ms-toolsai.jupyter",
+            "yzhang.markdown-all-in-one",
+            "marp-team.marp-vscode",
+            "GitHub.vscode-github-actions"]
       }
     },
     "postCreateCommand": "pip install --no-cache-dir -r requirements.txt && uname -a && python --version && pip --version",
